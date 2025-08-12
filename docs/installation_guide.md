@@ -21,7 +21,7 @@ mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=gcc -DCMAKE_INSTALL_PREFIX=~/builds
 make install
 ```
-This places the build files for libcloudphxx and libmpdata in the `~/builds` directory (or any other directory of your choice).
+This places the build files for libcloudphxx and libmpdata in the `~/builds` (or any other directory of your choice).
 
 3. Build UWLCM
 
@@ -72,21 +72,41 @@ git clone git@github.com:your-repo/UWLCM.git
   cd libmpdataxx/libmpdata++/build
    singularity exec --nv [IMAGE_NAME].sif sh -c
   "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=gcc
-  -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} .. ; make install"
-
+  -DCMAKE_INSTALL_PREFIX=~/builds .. ; make install"
+```
+```bash
 cd libcloudphxx/build
   $ singularity exec --nv [IMAGE_NAME].sif sh -c
   "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++
-  -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR}
+  -DCMAKE_INSTALL_PREFIX=~/builds
   -DLIBCLOUDPHXX_FORCE_MULTI_CUDA=True .. ; make -j4 install"
-
+```
+```bash
     cd UWLCM/build
    singularity exec --nv [IMAGE_NAME] sh -c
   "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=gcc
-  -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR}
-  -Dlibmpdata++_DIR=${INSTALL_DIR}/share/libmpdata++
-  -Dlibcloudph++_DIR=${INSTALL_DIR}/share/libcloudph++ .. ; make -j4 install" 
+  -DCMAKE_INSTALL_PREFIX=~/builds
+  -Dlibmpdata++_DIR=~/builds/share/libmpdata++
+  -Dlibcloudph++_DIR=~/builds/share/libcloudph++ .. ; make -j4 install" 
 ```
-
+This places the build files in the `~/builds` (or any other directory of your choice).
 When building for MPI runs, tell CMake to use the MPI compiler instead of gcc, e.g.:
 -DCMAKE_CXX_COMPILER=mpic++.
+---
+
+## Running simulations
+
+```bash
+LD_LIBRARY_PATH="${LD_LIBRARY_PATH};~/builds/lib/" ~/builds/bin/uwlcm --outdir=~/output --case=moist_thermal --nx=50 --ny=0 --nz=50 --dt=0.1 --nt=50 --micro=lgrngn --outfreq=10
+```
+
+Parameters:
+- `--outdir`: output directory
+- `--case`: one of the case names: dry_thermal, moist_thermal, dycoms_rf01, dycoms_rf02, cumulus_congestus_icmw20, cumulus_congestus_icmw24, rico11, dry_pbl
+- `--nx`: number of grid points in x-direction
+- `--ny`: number of grid points in y-direction (set to 0 for 2D simulations)
+- `--nz`: number of grid points in z-direction
+- `--dt`: time step
+- `--nt`: number of time steps
+- `--micro`: microphysics scheme: lgrngn, blk_1m, blk_1m_ice, blk_2m, none
+- `--outfreq`: output frequency (eg. every 10 time steps)
