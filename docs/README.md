@@ -2,11 +2,8 @@
 
 🌦️ Welcome to the UWLCM documentation. This is a work in progress.
 
-UWLCM is a sophisticated numerical modeling tool for cloud simulation that combines Large Eddy Simulation (LES) turbulence modeling with Lagrangian cloud microphysics. The model is designed for high-fidelity atmospheric cloud modeling and research applications.
-
 ## Overview
-
-UWLCM provides a comprehensive framework for simulating cloud dynamics and microphysics using advanced numerical methods. The model integrates atmospheric turbulence modeling with detailed cloud microphysics, enabling researchers to study cloud formation, evolution, and precipitation processes.
+UWLCM is a numerical modeling tool for cloud simulation that combines Large Eddy Simulation (LES) turbulence modeling with Lagrangian cloud microphysics. The model is designed for high-fidelity atmospheric cloud modeling and research applications, enabling researchers to study cloud formation, evolution, and precipitation processes.
 
 ## Key Features
 
@@ -27,7 +24,7 @@ UWLCM provides a comprehensive framework for simulating cloud dynamics and micro
 UWLCM is built upon two key libraries:
 
 - **[libmpdata++](https://github.com/igfuw/libmpdataxx)**: Advanced advection library implementing the MPDATA algorithm
-- **[libcloudph++](https://github.com/igfuw/libcloudphxx)**: Comprehensive cloud microphysics library
+- **[libcloudph++](https://github.com/igfuw/libcloudphxx)**: Cloud microphysics library
 
 ## Scientific Publications
 
@@ -39,7 +36,7 @@ The model is described in detail in the following peer-reviewed publications:
 
 ## Installation
 
-Detailed build instructions can be found in `build_instructions.txt`.
+Detailed build instructions can be found in `Installation_guide.md`.
 
 ## Visualization
 

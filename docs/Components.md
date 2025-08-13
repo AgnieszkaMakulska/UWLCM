@@ -1,18 +1,20 @@
 
-### Microphysics Schemes
+### 💧 Microphysics Schemes
+
 Microphysical schemes available in UWLCM are described in detail in the [libcloudphxx documentation](https://github.com/AgnieszkaMakulska/libcloudphxx/tree/docs/docs).
+
 ---
 
-### Cases: pre-configured simulation scenarios
+### ⚙️ Cases
 
-The cases are implemented as C++ header files in the `src/cases/` directory and include:
+Cases in UWLCM are pre-configured simulation scenarios. They are implemented as C++ header files in `src/cases/` and include:
 - Common functionality through `CasesCommon.hpp`
 - Anelastic approximation support through `Anelastic.hpp`
 - Various detail implementations in the `detail/` subdirectory
 
 #### **Thermal Cases:**
 - **`dry_thermal`** - Dry thermal bubble simulation (rising bubble of dry air)
-- **`moist_thermal`** - Moist thermal bubble simulation (based on Grabowski & Clark 1999)
+- **`moist_thermal`** - Moist thermal bubble simulation based on Grabowski & Clark 1999
 
 #### **Atmospheric Boundary Layer Cases:**
 - **`dry_pbl`** - Dry planetary boundary layer simulation
@@ -30,11 +32,11 @@ The cases are implemented as C++ header files in the `src/cases/` directory and 
 ---
 
 
-### Core Components of UWLCM
+### 🧩 Core Components of UWLCM
 
-- **Solvers** (`src/solvers`): Numerical algorithms for fluid dynamics and microphysics
-- **Forcings** (`src/forcings`): External atmospheric forcing mechanisms
-- **Formulae** (`src/formulae`): Mathematical formulations for physical processes
-- **Detail** (`src/detail`): Implementation details of the core components
-- **Opts** (`src/opts`): Command-line options for the simulation
+- **Solvers** (`src/solvers`): numerical algorithms for fluid dynamics and microphysics
+- **Forcings** (`src/forcings`): external atmospheric forcing mechanisms
+- **Formulae** (`src/formulae`): mathematical formulations for physical processes
+- **Detail** (`src/detail`): low-level implementation details and utilities
+- **Opts** (`src/opts`): command-line options for simulations
 

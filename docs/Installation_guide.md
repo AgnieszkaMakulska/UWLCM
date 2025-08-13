@@ -2,7 +2,7 @@
 
 ## Installation with dependencies
 
-1. Install dependencies that are needed for libcloudphxx and libmpdata. The list of dependencies can be found [here]().
+1. Install dependencies that are needed for libcloudphxx and libmpdata. The list of dependencies can be found [here](https://github.com/AgnieszkaMakulska/libcloudphxx/blob/docs/docs/Installation_guide.md).
 
 2. Build libcloudphxx and libmpdataxx
 
@@ -10,7 +10,7 @@
 git clone git@github.com:your-repo/libcloudphxx.git
 cd libcloudphxx
 mkdir build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++ -DCMAKE_INSTALL_PREFIX=~/builds
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++ -DCMAKE_INSTALL_PREFIX=builds_dir
 make install
 ```
 
@@ -18,10 +18,10 @@ make install
 git clone git@github.com:your-repo/libmpdataxx.git
 cd libmpdataxx/libmpdata++
 mkdir build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=gcc -DCMAKE_INSTALL_PREFIX=~/builds
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=gcc -DCMAKE_INSTALL_PREFIX=builds_dir
 make install
 ```
-This places the build files for libcloudphxx and libmpdata in the `~/builds` (or any other directory of your choice).
+This places the build files for libcloudphxx and libmpdata in the `builds_dir` directory (any directory of your choice).
 
 3. Build UWLCM
 
@@ -30,13 +30,13 @@ git clone git@github.com:your-repo/UWLCM.git
 cd UWLCM
 mkdir build && cd build
 cd Github/UWLCM/build
-cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++ -DCMAKE_INSTALL_PREFIX=~/builds -Dlibmpdata++_DIR=~/builds/share/libmpdata++ -Dlibcloudph++_DIR=~/builds/share/libcloudph++
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++ -DCMAKE_INSTALL_PREFIX=builds_dir -Dlibmpdata++_DIR=builds_dir/share/libmpdata++ -Dlibcloudph++_DIR=builds_dir/share/libcloudph++
 make install
 ```
 
 CMake options for UWLCM:
 - Running the compilation in parallel for speedup: `make -jN install`, where N is the number of cores.
-- Disabling some configurations for speedup: -DUWLCM_DISABLE="PIGGYBACKER;3D_LGRNGN". Possible configurarions are:
+- Disabling some configurations for speedup, e.g.: -DUWLCM_DISABLE="PIGGYBACKER;3D_LGRNGN". Possible configurarions are:
     - 3D_LGRNGN - 3D with Lagrangian microphysics
     - 2D_LGRNGN - 2D with Lagrangian microphysics
     - 3D_BLK_2M - 3D with 2-moment bulk microphysics
@@ -51,12 +51,12 @@ CMake options for UWLCM:
 ---
 
 ## Installation with Apprainer/Singularity
-Apptainer is a container platform designed for scientific computing. It allows packaging the software environment — including dependencies into a single, portable Singularity Image File (.sif). To install UWLCM with Apptainer, follow the steps below:
+Apptainer/Singularity is a container platform designed for scientific computing. It allows packaging the software environment — including dependencies into a single, portable Singularity Image File (.sif). To install UWLCM with Apptainer, follow the steps below:
 
 1. You need to have Singularity or Apptainer. It is most probably already installed on your cluster.
 
-2. Download the UWLCM image from:
-   
+2. Download the UWLCM image from
+https://zenodo.org/records/15630519  
 For MPI (parallel computation on multiple nodes), download the Singularity image with MPI (MVAPICH2).
 
 3. Clone libmpdata++, libcloudph++ and UWLCM repositories:
@@ -70,26 +70,25 @@ git clone git@github.com:your-repo/UWLCM.git
 
 ```bash
   cd libmpdataxx/libmpdata++/build
-   singularity exec --nv [IMAGE_NAME].sif sh -c
+  singularity exec --nv [IMAGE_NAME].sif sh -c
   "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=gcc
-  -DCMAKE_INSTALL_PREFIX=~/builds .. ; make install"
+  -DCMAKE_INSTALL_PREFIX=builds_dir .. ; make install"
 ```
 ```bash
-cd libcloudphxx/build
+  cd libcloudphxx/build
   $ singularity exec --nv [IMAGE_NAME].sif sh -c
   "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++
-  -DCMAKE_INSTALL_PREFIX=~/builds
-  -DLIBCLOUDPHXX_FORCE_MULTI_CUDA=True .. ; make -j4 install"
+  -DCMAKE_INSTALL_PREFIX=builds_dir .. ; make -j4 install"
 ```
 ```bash
-    cd UWLCM/build
-   singularity exec --nv [IMAGE_NAME] sh -c
+  cd UWLCM/build
+  singularity exec --nv [IMAGE_NAME] sh -c
   "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=gcc
-  -DCMAKE_INSTALL_PREFIX=~/builds
-  -Dlibmpdata++_DIR=~/builds/share/libmpdata++
-  -Dlibcloudph++_DIR=~/builds/share/libcloudph++ .. ; make -j4 install" 
+  -DCMAKE_INSTALL_PREFIX=builds_dir
+  -Dlibmpdata++_DIR=builds_dir/share/libmpdata++
+  -Dlibcloudph++_DIR=builds_dir/share/libcloudph++ .. ; make -j4 install" 
 ```
-This places the build files in the `~/builds` (or any other directory of your choice).
+This places the build files in the `builds_dir` (any directory of your choice).
 When building for MPI runs, tell CMake to use the MPI compiler instead of gcc, e.g.:
 -DCMAKE_CXX_COMPILER=mpic++.
 ---
@@ -97,7 +96,7 @@ When building for MPI runs, tell CMake to use the MPI compiler instead of gcc, e
 ## Running simulations
 
 ```bash
-LD_LIBRARY_PATH="${LD_LIBRARY_PATH};~/builds/lib/" ~/builds/bin/uwlcm --outdir=~/output --case=moist_thermal --nx=50 --ny=0 --nz=50 --dt=0.1 --nt=50 --micro=lgrngn --outfreq=10
+LD_LIBRARY_PATH="${LD_LIBRARY_PATH};builds_dir/lib/" builds_dir/bin/uwlcm --outdir=output_dir --case=moist_thermal --nx=50 --ny=0 --nz=50 --dt=0.1 --nt=50 --micro=lgrngn --outfreq=10
 ```
 
 Parameters:
