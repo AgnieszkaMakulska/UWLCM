@@ -91,8 +91,9 @@ git clone git@github.com:your-repo/UWLCM.git
 This places the build files in the `builds_dir` (any directory of your choice).
 When building for MPI runs, tell CMake to use the MPI compiler instead of gcc, e.g.:
 -DCMAKE_CXX_COMPILER=mpic++.
----
 
+
+---
 ## Running simulations
 
 ```bash
