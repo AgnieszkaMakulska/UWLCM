@@ -1,7 +1,8 @@
 \begin{theindex}
 
   \item {alloc}
-    \subitem {slvr\_lgrngn$<$ ct\_params\_t $>$}, \hyperpage{24}
+    \subitem {slvr\_lgrngn$<$ ct\_params\_t $>$}, \hyperpage{26}
+    \subitem {slvr\_sgs$<$ ct\_params\_t $>$}, \hyperpage{30}
   \item {Anelastic$<$ case\_ct\_params\_t, n\_dims $>$}, \hyperpage{5}
     \subitem {env\_prof}, \hyperpage{7}
     \subitem {ref\_prof}, \hyperpage{7}
@@ -22,15 +23,16 @@
   \indexspace
 
   \item {get\_rain}
-    \subitem {slvr\_common$<$ ct\_params\_t $>$}, \hyperpage{20}
+    \subitem {slvr\_common$<$ ct\_params\_t $>$}, \hyperpage{21}
 
   \indexspace
 
   \item {hook\_ante\_loop}
-    \subitem {slvr\_common$<$ ct\_params\_t $>$}, \hyperpage{20}
-    \subitem {slvr\_lgrngn$<$ ct\_params\_t $>$}, \hyperpage{24}
+    \subitem {slvr\_common$<$ ct\_params\_t $>$}, \hyperpage{21}
+    \subitem {slvr\_lgrngn$<$ ct\_params\_t $>$}, \hyperpage{26}
+    \subitem {slvr\_sgs$<$ ct\_params\_t $>$}, \hyperpage{31}
   \item {hook\_ante\_step}
-    \subitem {slvr\_lgrngn$<$ ct\_params\_t $>$}, \hyperpage{25}
+    \subitem {slvr\_lgrngn$<$ ct\_params\_t $>$}, \hyperpage{27}
 
   \indexspace
 
@@ -97,21 +99,32 @@
     \subitem {rr\_src}, \hyperpage{18}
     \subitem {slvr\_blk\_2m\_common}, \hyperpage{17}
     \subitem {update\_rhs}, \hyperpage{18}
-  \item {slvr\_common$<$ ct\_params\_t $>$}, \hyperpage{19}
-    \subitem {get\_rain}, \hyperpage{20}
-    \subitem {hook\_ante\_loop}, \hyperpage{20}
+  \item {slvr\_common$<$ ct\_params\_t $>$}, \hyperpage{20}
+    \subitem {get\_rain}, \hyperpage{21}
+    \subitem {hook\_ante\_loop}, \hyperpage{21}
     \subitem {rv\_src}, \hyperpage{21}
     \subitem {set\_rain}, \hyperpage{21}
-    \subitem {th\_src}, \hyperpage{21}
+    \subitem {th\_src}, \hyperpage{22}
     \subitem {update\_rhs}, \hyperpage{22}
-    \subitem {w\_src}, \hyperpage{22}
+    \subitem {w\_src}, \hyperpage{23}
+  \item {slvr\_dim\_2D}, \hyperpage{23}
+  \item {slvr\_dry$<$ ct\_params\_t $>$}, \hyperpage{24}
   \item {slvr\_lgrngn}
-    \subitem {slvr\_lgrngn$<$ ct\_params\_t $>$}, \hyperpage{24}
-  \item {slvr\_lgrngn$<$ ct\_params\_t $>$}, \hyperpage{23}
-    \subitem {alloc}, \hyperpage{24}
-    \subitem {hook\_ante\_loop}, \hyperpage{24}
-    \subitem {hook\_ante\_step}, \hyperpage{25}
-    \subitem {slvr\_lgrngn}, \hyperpage{24}
+    \subitem {slvr\_lgrngn$<$ ct\_params\_t $>$}, \hyperpage{25}
+  \item {slvr\_lgrngn$<$ ct\_params\_t $>$}, \hyperpage{24}
+    \subitem {alloc}, \hyperpage{26}
+    \subitem {hook\_ante\_loop}, \hyperpage{26}
+    \subitem {hook\_ante\_step}, \hyperpage{27}
+    \subitem {slvr\_lgrngn}, \hyperpage{25}
+  \item {slvr\_piggy\_driver}, \hyperpage{27}
+  \item {slvr\_piggy\_piggybacker}, \hyperpage{27}
+  \item {slvr\_sgs}
+    \subitem {slvr\_sgs$<$ ct\_params\_t $>$}, \hyperpage{30}
+  \item {slvr\_sgs$<$ ct\_params\_t $>$}, \hyperpage{28}
+    \subitem {alloc}, \hyperpage{30}
+    \subitem {hook\_ante\_loop}, \hyperpage{31}
+    \subitem {slvr\_sgs}, \hyperpage{30}
+    \subitem {update\_rhs}, \hyperpage{31}
 
   \indexspace
 
@@ -119,7 +132,7 @@
     \subitem {Anelastic$<$ case\_ct\_params\_t, n\_dims $>$}, 
 		\hyperpage{7}
   \item {th\_src}
-    \subitem {slvr\_common$<$ ct\_params\_t $>$}, \hyperpage{21}
+    \subitem {slvr\_common$<$ ct\_params\_t $>$}, \hyperpage{22}
 
   \indexspace
 
@@ -129,10 +142,11 @@
     \subitem {slvr\_blk\_2m\_common$<$ ct\_params\_t $>$}, 
 		\hyperpage{18}
     \subitem {slvr\_common$<$ ct\_params\_t $>$}, \hyperpage{22}
+    \subitem {slvr\_sgs$<$ ct\_params\_t $>$}, \hyperpage{31}
 
   \indexspace
 
   \item {w\_src}
-    \subitem {slvr\_common$<$ ct\_params\_t $>$}, \hyperpage{22}
+    \subitem {slvr\_common$<$ ct\_params\_t $>$}, \hyperpage{23}
 
 \end{theindex}

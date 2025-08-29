@@ -44,22 +44,38 @@
 \contentsline {subsubsection}{\numberline {3.9.3.3}rc\_src()}{18}{subsubsection.3.9.3.3}%
 \contentsline {subsubsection}{\numberline {3.9.3.4}rr\_src()}{18}{subsubsection.3.9.3.4}%
 \contentsline {subsubsection}{\numberline {3.9.3.5}update\_rhs()}{19}{subsubsection.3.9.3.5}%
-\contentsline {section}{\numberline {3.10}slvr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}common$<$ ct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}params\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t $>$}{19}{section.3.10}%
-\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{20}{subsection.3.10.1}%
-\contentsline {subsection}{\numberline {3.10.2}Member Function Documentation}{20}{subsection.3.10.2}%
-\contentsline {subsubsection}{\numberline {3.10.2.1}get\_rain()}{20}{subsubsection.3.10.2.1}%
+\contentsline {section}{\numberline {3.10}slvr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}common$<$ ct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}params\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t $>$}{20}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{21}{subsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.10.2}Member Function Documentation}{21}{subsection.3.10.2}%
+\contentsline {subsubsection}{\numberline {3.10.2.1}get\_rain()}{21}{subsubsection.3.10.2.1}%
 \contentsline {subsubsection}{\numberline {3.10.2.2}hook\_ante\_loop()}{21}{subsubsection.3.10.2.2}%
 \contentsline {subsubsection}{\numberline {3.10.2.3}rv\_src()}{21}{subsubsection.3.10.2.3}%
-\contentsline {subsubsection}{\numberline {3.10.2.4}set\_rain()}{21}{subsubsection.3.10.2.4}%
+\contentsline {subsubsection}{\numberline {3.10.2.4}set\_rain()}{22}{subsubsection.3.10.2.4}%
 \contentsline {subsubsection}{\numberline {3.10.2.5}th\_src()}{22}{subsubsection.3.10.2.5}%
 \contentsline {subsubsection}{\numberline {3.10.2.6}update\_rhs()}{22}{subsubsection.3.10.2.6}%
-\contentsline {subsubsection}{\numberline {3.10.2.7}w\_src()}{22}{subsubsection.3.10.2.7}%
-\contentsline {section}{\numberline {3.11}slvr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lgrngn$<$ ct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}params\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t $>$}{23}{section.3.11}%
+\contentsline {subsubsection}{\numberline {3.10.2.7}w\_src()}{23}{subsubsection.3.10.2.7}%
+\contentsline {section}{\numberline {3.11}slvr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}dim\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2D}{23}{section.3.11}%
 \contentsline {subsection}{\numberline {3.11.1}Detailed Description}{23}{subsection.3.11.1}%
-\contentsline {subsection}{\numberline {3.11.2}Constructor \& Destructor Documentation}{24}{subsection.3.11.2}%
-\contentsline {subsubsection}{\numberline {3.11.2.1}slvr\_lgrngn()}{24}{subsubsection.3.11.2.1}%
-\contentsline {subsection}{\numberline {3.11.3}Member Function Documentation}{24}{subsection.3.11.3}%
-\contentsline {subsubsection}{\numberline {3.11.3.1}alloc()}{24}{subsubsection.3.11.3.1}%
-\contentsline {subsubsection}{\numberline {3.11.3.2}hook\_ante\_loop()}{24}{subsubsection.3.11.3.2}%
-\contentsline {subsubsection}{\numberline {3.11.3.3}hook\_ante\_step()}{25}{subsubsection.3.11.3.3}%
-\contentsline {chapter}{Index}{27}{section*.30}%
+\contentsline {section}{\numberline {3.12}slvr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}dry$<$ ct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}params\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t $>$}{24}{section.3.12}%
+\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{24}{subsection.3.12.1}%
+\contentsline {section}{\numberline {3.13}slvr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lgrngn$<$ ct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}params\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t $>$}{24}{section.3.13}%
+\contentsline {subsection}{\numberline {3.13.1}Detailed Description}{25}{subsection.3.13.1}%
+\contentsline {subsection}{\numberline {3.13.2}Constructor \& Destructor Documentation}{25}{subsection.3.13.2}%
+\contentsline {subsubsection}{\numberline {3.13.2.1}slvr\_lgrngn()}{25}{subsubsection.3.13.2.1}%
+\contentsline {subsection}{\numberline {3.13.3}Member Function Documentation}{26}{subsection.3.13.3}%
+\contentsline {subsubsection}{\numberline {3.13.3.1}alloc()}{26}{subsubsection.3.13.3.1}%
+\contentsline {subsubsection}{\numberline {3.13.3.2}hook\_ante\_loop()}{26}{subsubsection.3.13.3.2}%
+\contentsline {subsubsection}{\numberline {3.13.3.3}hook\_ante\_step()}{27}{subsubsection.3.13.3.3}%
+\contentsline {section}{\numberline {3.14}slvr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}piggy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}driver}{27}{section.3.14}%
+\contentsline {subsection}{\numberline {3.14.1}Detailed Description}{27}{subsection.3.14.1}%
+\contentsline {section}{\numberline {3.15}slvr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}piggy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}piggybacker}{27}{section.3.15}%
+\contentsline {subsection}{\numberline {3.15.1}Detailed Description}{27}{subsection.3.15.1}%
+\contentsline {section}{\numberline {3.16}slvr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sgs$<$ ct\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}params\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t $>$}{28}{section.3.16}%
+\contentsline {subsection}{\numberline {3.16.1}Detailed Description}{30}{subsection.3.16.1}%
+\contentsline {subsection}{\numberline {3.16.2}Constructor \& Destructor Documentation}{30}{subsection.3.16.2}%
+\contentsline {subsubsection}{\numberline {3.16.2.1}slvr\_sgs()}{30}{subsubsection.3.16.2.1}%
+\contentsline {subsection}{\numberline {3.16.3}Member Function Documentation}{30}{subsection.3.16.3}%
+\contentsline {subsubsection}{\numberline {3.16.3.1}alloc()}{30}{subsubsection.3.16.3.1}%
+\contentsline {subsubsection}{\numberline {3.16.3.2}hook\_ante\_loop()}{31}{subsubsection.3.16.3.2}%
+\contentsline {subsubsection}{\numberline {3.16.3.3}update\_rhs()}{31}{subsubsection.3.16.3.3}%
+\contentsline {chapter}{Index}{33}{section*.39}%

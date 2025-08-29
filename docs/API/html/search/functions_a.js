@@ -6,5 +6,6 @@ var searchData=
   ['setopts_5fhlpr_3',['setopts_hlpr',['../classcases_1_1rico_1_1Rico11Common.html#a1d1e0c9fdd0e37ccf86de85a41772e1a',1,'cases::rico::Rico11Common']]],
   ['setopts_5fsgs_4',['setopts_sgs',['../classcases_1_1CasesCommon.html#a1fc8f98b0af6a239483bf5ab19560faa',1,'cases::CasesCommon::setopts_sgs()'],['../classcases_1_1rico_1_1Rico11Common.html#a1fc8f98b0af6a239483bf5ab19560faa',1,'cases::rico::Rico11Common::setopts_sgs()']]],
   ['slvr_5fblk_5f2m_5fcommon_5',['slvr_blk_2m_common',['../classslvr__blk__2m__common.html#ad5085adafa9d68b1e69d0ac541a4fc4f',1,'slvr_blk_2m_common']]],
-  ['slvr_5flgrngn_6',['slvr_lgrngn',['../classslvr__lgrngn.html#ada814daab71136009cd79a125806d770',1,'slvr_lgrngn']]]
+  ['slvr_5flgrngn_6',['slvr_lgrngn',['../classslvr__lgrngn.html#ada814daab71136009cd79a125806d770',1,'slvr_lgrngn']]],
+  ['slvr_5fsgs_7',['slvr_sgs',['../classslvr__sgs.html#a12c57a3852b092b29b44291aa3b3435a',1,'slvr_sgs']]]
 ];

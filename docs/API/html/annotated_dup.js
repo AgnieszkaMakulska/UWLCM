@@ -14,5 +14,10 @@ var annotated_dup =
     [ "slvr_blk_2m_3D", "classslvr__blk__2m__3D.html", null ],
     [ "slvr_blk_2m_common", "classslvr__blk__2m__common.html", "classslvr__blk__2m__common" ],
     [ "slvr_common", "classslvr__common.html", "classslvr__common" ],
-    [ "slvr_lgrngn", "classslvr__lgrngn.html", "classslvr__lgrngn" ]
+    [ "slvr_dim_2D", "classslvr__dim__2D.html", null ],
+    [ "slvr_dry", "classslvr__dry.html", null ],
+    [ "slvr_lgrngn", "classslvr__lgrngn.html", "classslvr__lgrngn" ],
+    [ "slvr_piggy_driver", "classslvr__piggy__driver.html", null ],
+    [ "slvr_piggy_piggybacker", "classslvr__piggy__piggybacker.html", null ],
+    [ "slvr_sgs", "classslvr__sgs.html", "classslvr__sgs" ]
 ];
