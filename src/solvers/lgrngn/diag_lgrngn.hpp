@@ -211,7 +211,7 @@ void slvr_lgrngn<ct_params_t>::diag()
 
     // recording ice mixing ratio
     prtcls->diag_ice_mix_ratio();
-    this->record_aux("r_i", prtcls->outbuf());
+    this->record_aux("ice_mix_ratio", prtcls->outbuf());
 
     // recording 0th moment of ice
     prtcls->diag_ice_a_mom(0);

@@ -63,6 +63,8 @@ void setopts_micro(
     ("adve", po::value<bool>()->default_value(rt_params.cloudph_opts.adve) , "particle advection     (1=on, 0=off)")
     ("sedi", po::value<bool>()->default_value(rt_params.cloudph_opts.sedi) , "particle sedimentation (1=on, 0=off)")
     ("cond", po::value<bool>()->default_value(rt_params.cloudph_opts.cond) , "condensational growth  (1=on, 0=off)")
+    ("ice_nucl", po::value<bool>()->default_value(rt_params.cloudph_opts.ice_nucl) , "ice nucleation (1=on, 0=off)")
+    ("depo", po::value<bool>()->default_value(rt_params.cloudph_opts.depo) , "depositional growth  (1=on, 0=off)")
     ("rcyc", po::value<bool>()->default_value(false) , "SDs recycling  (1=on, 0=off)")
     ("coal", po::value<bool>()->default_value(rt_params.cloudph_opts.coal) , "collisional growth     (1=on, 0=off)")
     ("chem_dsl", po::value<bool>()->default_value(rt_params.cloudph_opts.chem_dsl) , "dissolving trace gases (1=on, 0=off)")
@@ -70,8 +72,8 @@ void setopts_micro(
     ("chem_rct", po::value<bool>()->default_value(rt_params.cloudph_opts.chem_rct) , "aqueous chemistry      (1=on, 0=off)")
     ("dev_count", po::value<int>()->default_value(0), "no. of CUDA devices")
     ("dev_id", po::value<int>()->default_value(-1), "CUDA backend - id of device to be used")
+    ("coal_switch", po::value<bool>()->default_value(rt_params.cloudph_opts_init.coal_switch) , "enable coalescence (1=on, 0=off)")
     ("ice_switch", po::value<bool>()->default_value(rt_params.cloudph_opts_init.ice_switch) , "enable ice microphysics (1=on, 0=off)")
-    ("ice_nucl", po::value<bool>()->default_value(rt_params.cloudph_opts.ice_nucl) , "ice nucleation (1=on, 0=off)")
     ("time_dep_ice_nucl", po::value<bool>()->default_value(rt_params.cloudph_opts_init.time_dep_ice_nucl) , "time dependent ice nucleation (1=on, 0=off)")
     // free parameters
     ("exact_sstp_cond", po::value<bool>()->default_value(rt_params.cloudph_opts_init.exact_sstp_cond), "exact(per-particle) logic for substeps for condensation")
@@ -414,6 +416,7 @@ void setopts_micro(
   rt_params.cloudph_opts.cond = vm["cond"].as<bool>();
   rt_params.cloudph_opts.coal = vm["coal"].as<bool>();
   rt_params.cloudph_opts.ice_nucl = vm["ice_nucl"].as<bool>();
+  rt_params.cloudph_opts.depo = vm["depo"].as<bool>();
 
   rt_params.cloudph_opts.rcyc = vm["rcyc"].as<bool>();
   rt_params.cloudph_opts.chem_dsl = vm["chem_dsl"].as<bool>();
@@ -437,6 +440,7 @@ void setopts_micro(
   rt_params.cloudph_opts_init.ice_switch = vm["ice_switch"].as<bool>();
   rt_params.cloudph_opts_init.time_dep_ice_nucl = vm["time_dep_ice_nucl"].as<bool>();
 
+  rt_params.cloudph_opts_init.coal_switch = vm["coal_switch"].as<bool>();
   // coalescence kernel choice
   std::string kernel_str = vm["coal_kernel"].as<std::string>();
 

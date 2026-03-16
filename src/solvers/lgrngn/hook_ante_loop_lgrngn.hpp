@@ -165,6 +165,7 @@ void slvr_lgrngn<ct_params_t>::hook_ante_loop(int nt)
     this->record_aux_const("cond", "lgrngn", params.cloudph_opts.cond);  
     this->record_aux_const("coal", "lgrngn", params.flag_coal);  // cloudph_opts.coal could be 0 here due to spinup
     this->record_aux_const("ice_nucl", "lgrngn", params.cloudph_opts.ice_nucl);
+    this->record_aux_const("depo", "lgrngn", params.cloudph_opts.depo);
     this->record_aux_const("rcyc", "lgrngn", params.cloudph_opts.rcyc);  
     this->record_aux_const("src", "lgrngn", params.cloudph_opts.src);  
     this->record_aux_const("rlx", "lgrngn", params.cloudph_opts.rlx);  
