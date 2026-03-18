@@ -47,7 +47,7 @@ namespace cases
     }
 */
     
-    const quantity<si::temperature, real_t> T_0(277. * si::kelvins);  // surface temperature
+    const quantity<si::temperature, real_t> T_0(250. * si::kelvins);  // surface temperature
     const quantity<si::pressure, real_t> p_0(100000 * si::pascals); // total surface temperature
     const real_t stab = 1.3e-5; // stability, 1/m
     const real_t env_RH = 0.2;

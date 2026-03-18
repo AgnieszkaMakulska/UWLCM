@@ -23,14 +23,12 @@ void slvr_lgrngn<ct_params_t>::diag()
   this->record_aux("RH", prtcls->outbuf());
 
   // recording pressure
-  /*
   prtcls->diag_pressure();
   this->record_aux("libcloud_pressure", prtcls->outbuf());
 
   // recording temperature
   prtcls->diag_temperature();
   this->record_aux("libcloud_temperature", prtcls->outbuf());
-  */
 
   // recording precipitation rate per grid cel
   prtcls->diag_water();
@@ -229,6 +227,20 @@ void slvr_lgrngn<ct_params_t>::diag()
     this->record_aux("precip_rate_ice_mass", prtcls->outbuf());
 
   }
+
+  if (params.cloudph_opts_init.adaptive_sstp_cond)
+  {
+    // mean sstp cond for liquid
+    prtcls->diag_water();
+    prtcls->diag_sstp_cond_mom(1);
+    this->record_aux("sstp_cond_mean_liq", prtcls->outbuf());
+
+    // mean sstp cond for ice
+    prtcls->diag_ice();
+    prtcls->diag_sstp_cond_mom(1);
+    this->record_aux("sstp_cond_mean_ice", prtcls->outbuf());
+  }
+
   // recording requested statistical moments
   if ((this->timestep ) % static_cast<int>(params.outfreq_spec) == 0)
   {
