@@ -232,13 +232,17 @@ void slvr_lgrngn<ct_params_t>::diag()
   {
     // mean sstp cond for liquid
     prtcls->diag_water();
+    prtcls->diag_sstp_cond_mom(0);
+    this->record_aux("sstp_cond_liq_mom0", prtcls->outbuf());
     prtcls->diag_sstp_cond_mom(1);
-    this->record_aux("sstp_cond_mean_liq", prtcls->outbuf());
+    this->record_aux("sstp_cond_liq_mom1", prtcls->outbuf());
 
     // mean sstp cond for ice
     prtcls->diag_ice();
+    prtcls->diag_sstp_cond_mom(0);
+    this->record_aux("sstp_cond_ice_mom0", prtcls->outbuf());
     prtcls->diag_sstp_cond_mom(1);
-    this->record_aux("sstp_cond_mean_ice", prtcls->outbuf());
+    this->record_aux("sstp_cond_ice_mom1", prtcls->outbuf());
   }
 
   // recording requested statistical moments
