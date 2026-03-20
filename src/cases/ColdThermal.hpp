@@ -47,8 +47,8 @@ namespace cases
     }
 */
     
-    const quantity<si::temperature, real_t> T_0(250. * si::kelvins);  // surface temperature
-    const quantity<si::pressure, real_t> p_0(100000 * si::pascals); // total surface temperature
+    const quantity<si::temperature, real_t> T_0(273. * si::kelvins);  // surface temperature
+    const quantity<si::pressure, real_t> p_0(85000 * si::pascals); // total surface temperature
     const real_t stab = 1.3e-5; // stability, 1/m
     const real_t env_RH = 0.2;
     const real_t prtrb_RH = 1. - 1e-10;
@@ -56,7 +56,7 @@ namespace cases
     const quantity<si::dimensionless, real_t> rv_0 = RH_T_p_to_rv(env_RH, T_0, p_0);
     const quantity<si::dimensionless, real_t> qv_0 = rv_0 / (1. + rv_0); // specific humidity at surface
     const quantity<si::length, real_t> 
-     Z_def    ( 3000 * si::metres),
+     Z_def    ( 4000 * si::metres),
      X_def    ( 3600 * si::metres), 
      Y_def    ( 3600 * si::metres), 
      z_prtrb ( 800 * si::metres);
@@ -298,6 +298,7 @@ namespace cases
       ColdThermalCommon()
       {
         this->kappa = 1.28; // NaCl aerosol
+        this->rd_insol = 0.5e-6 * si::meters;
       }
     };
 

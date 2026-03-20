@@ -237,12 +237,15 @@ void slvr_lgrngn<ct_params_t>::diag()
     prtcls->diag_sstp_cond_mom(1);
     this->record_aux("sstp_cond_liq_mom1", prtcls->outbuf());
 
-    // mean sstp cond for ice
-    prtcls->diag_ice();
-    prtcls->diag_sstp_cond_mom(0);
-    this->record_aux("sstp_cond_ice_mom0", prtcls->outbuf());
-    prtcls->diag_sstp_cond_mom(1);
-    this->record_aux("sstp_cond_ice_mom1", prtcls->outbuf());
+    if (params.cloudph_opts_init.ice_switch)
+    {
+      // mean sstp cond for ice
+      prtcls->diag_ice();
+      prtcls->diag_sstp_cond_mom(0);
+      this->record_aux("sstp_cond_ice_mom0", prtcls->outbuf());
+      prtcls->diag_sstp_cond_mom(1);
+      this->record_aux("sstp_cond_ice_mom1", prtcls->outbuf());
+    }
   }
 
   // recording requested statistical moments
