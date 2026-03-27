@@ -152,7 +152,8 @@ void slvr_lgrngn<ct_params_t>::hook_ante_loop(int nt)
     this->record_aux_const("dev_id", "lgrngn", params.cloudph_opts_init.dev_id);  
     this->record_aux_const("sstp_cond", "lgrngn", params.cloudph_opts_init.sstp_cond);  
     this->record_aux_const("sstp_coal", "lgrngn", params.cloudph_opts_init.sstp_coal);  
-    this->record_aux_const("sstp_chem", "lgrngn", params.cloudph_opts_init.sstp_chem);  
+    this->record_aux_const("sstp_chem", "lgrngn", params.cloudph_opts_init.sstp_chem);
+    this->record_aux_const("sstp_cond_act", "lgrngn", params.cloudph_opts_init.sstp_cond_act);
     this->record_aux_const("exact_sstp_cond", "lgrngn", params.cloudph_opts_init.exact_sstp_cond);
     this->record_aux_const("adaptive_sstp_cond", "lgrngn", params.cloudph_opts_init.adaptive_sstp_cond);
     this->record_aux_const("sstp_cond_mix", "lgrngn", params.cloudph_opts_init.sstp_cond_mix);

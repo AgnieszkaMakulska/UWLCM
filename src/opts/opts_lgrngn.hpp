@@ -84,6 +84,7 @@ void setopts_micro(
     ("sstp_cond", po::value<int>()->default_value(rt_params.cloudph_opts_init.sstp_cond), "no. of substeps for condensation")
     ("sstp_coal", po::value<int>()->default_value(rt_params.cloudph_opts_init.sstp_coal), "no. of substeps for coalescence")
     ("sstp_chem", po::value<int>()->default_value(rt_params.cloudph_opts_init.sstp_chem), "no. of substeps for chemistry")
+    ("sstp_cond_act", po::value<int>()->default_value(rt_params.cloudph_opts_init.sstp_cond_act), "no. of substeps during activation")
     // 
     ("out_dry", po::value<std::string>()->default_value(""),  "dry radius ranges and moment numbers (r1:r2|n1,n2...;...)")
     ("out_wet", po::value<std::string>()->default_value(""),  "wet radius ranges and moment numbers (r1:r2|n1,n2...;...)")
@@ -431,6 +432,7 @@ void setopts_micro(
   rt_params.cloudph_opts_init.sstp_cond = vm["sstp_cond"].as<int>();
   rt_params.cloudph_opts_init.sstp_coal = vm["sstp_coal"].as<int>();
   rt_params.cloudph_opts_init.sstp_chem = vm["sstp_chem"].as<int>();
+  rt_params.cloudph_opts_init.sstp_cond_act = vm["sstp_cond_act"].as<int>();
   rt_params.cloudph_opts_init.exact_sstp_cond = vm["exact_sstp_cond"].as<bool>();
   rt_params.cloudph_opts_init.diag_incloud_time = vm["diag_incloud_time"].as<bool>();
   rt_params.cloudph_opts_init.sd_conc_large_tail = vm["sd_conc_large_tail"].as<bool>();
