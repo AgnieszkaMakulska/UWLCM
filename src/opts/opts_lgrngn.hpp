@@ -438,6 +438,7 @@ void setopts_micro(
   rt_params.cloudph_opts_init.diag_incloud_time = vm["diag_incloud_time"].as<bool>();
   rt_params.cloudph_opts_init.sd_conc_large_tail = vm["sd_conc_large_tail"].as<bool>();
   rt_params.cloudph_opts_init.adaptive_sstp_cond = vm["adaptive_sstp_cond"].as<bool>();
+  rt_params.cloudph_opts_init.sstp_cond_adapt_drw2_eps = vm["sstp_cond_adapt_drw2_eps"].as<setup::real_t>();
   rt_params.cloudph_opts_init.sstp_cond_mix = vm["sstp_cond_mix"].as<bool>();
 
   rt_params.cloudph_opts_init.rng_seed = user_params.rng_seed;
