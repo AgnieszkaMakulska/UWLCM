@@ -78,6 +78,7 @@ void setopts_micro(
     // free parameters
     ("exact_sstp_cond", po::value<bool>()->default_value(rt_params.cloudph_opts_init.exact_sstp_cond), "exact(per-particle) logic for substeps for condensation")
     ("adaptive_sstp_cond", po::value<bool>()->default_value(rt_params.cloudph_opts_init.adaptive_sstp_cond), "adaptive substeps for condensation and deposition")
+    ("sstp_cond_adapt_drw2_eps", po::value<setup::real_t>()->default_value(rt_params.cloudph_opts_init.sstp_cond_adapt_drw2_eps), "tolerance for adaptive substepping in condensation/deposition")
     ("sstp_cond_mix", po::value<bool>()->default_value(rt_params.cloudph_opts_init.sstp_cond_mix), "mixing between substeps for condensation/deposition")
     ("diag_incloud_time", po::value<bool>()->default_value(rt_params.cloudph_opts_init.diag_incloud_time), "diagnose incloud time of droplets")
     ("sd_conc_large_tail", po::value<bool>()->default_value(rt_params.cloudph_opts_init.sd_conc_large_tail), "add SDs to better represent the large tail")
