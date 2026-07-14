@@ -96,7 +96,7 @@ int main(int ac, char** av)
               // we need larger nz for the LBA case
               auto pos = opts_d.find("--nz=");
               auto end = opts_d.find(' ', pos);
-              opts_d.replace(pos, end == string::npos ? string::npos : end - pos, "--nz=20");
+              opts_d.replace(pos, end == string::npos ? string::npos : end - pos, "--nz=40");
             }
 
             ostringstream cmd, opts;
