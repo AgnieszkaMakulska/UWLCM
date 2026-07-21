@@ -93,10 +93,19 @@ int main(int ac, char** av)
             }
             if(opts_c == opts_case[14]) // daytime_convection_LBA
             {
-              // we need larger nz for the LBA case
-              auto pos = opts_d.find("--nz=");
-              auto end = opts_d.find(' ', pos);
-              opts_d.replace(pos, end == string::npos ? string::npos : end - pos, "--nz=50");
+              // we need larger nx, ny, nz for the LBA case
+              size_t pos;
+
+              pos = opts_d.find("--nz=");
+              opts_d.replace(pos, opts_d.find(' ', pos) - pos, "--nz=160");
+
+              pos = opts_d.find("--nx=");
+              opts_d.replace(pos, opts_d.find(' ', pos) - pos, "--nx=128");
+
+              pos = opts_d.find("--ny=");
+              if (pos != std::string::npos) {
+                opts_d.replace(pos, opts_d.find(' ', pos) - pos, "--ny=128");
+              }
             }
 
             ostringstream cmd, opts;
